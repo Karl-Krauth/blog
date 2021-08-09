@@ -1,0 +1,13 @@
+id = "karlk"
+
+[email]
+username = "karlk"
+host = "berkeley dot edu"
+
+[name]
+display = "Karl Krauth"
+
+[social]
+email = "karlk at berkeley dot edu"
+facebook  = ""
+twitter = "Krauth"

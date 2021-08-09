@@ -1,11 +1,11 @@
-baseURL = "https://measurezero.net"
+baseURL = "http://www.measurezero.net"
 title = "Measure Zero"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
 theme = "minimo"
 
-disqusShortname = "measurezero"
+disqusShortname = ""
 googleAnalytics = ""
 
 Paginate = 5
@@ -22,7 +22,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "A blog about computer science, mathematics, and statistics."
+description = "A blog about computer science, mathematics, and statistics"
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -37,7 +37,9 @@ dateFormat = "2006, Jan 02"
 listDateFormat = "2006, Jan 02"
 archiveDateFormat = "Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
 showReadingTime = true
+showLastmod = true
 taxonomyCloudShuffle = true
 accentColor = "#ffcd00"
 hideMainMenu = false
@@ -46,8 +48,9 @@ hideMainMenu = false
 enable = false
 
 [params.widgets]
+header = ["breadcrumbs"]
 homepage = ["recent_posts"]
-sidebar = ["about","taxonomy_cloud"]
+sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
 footer = ["social_menu"]
 
 [params.opengraph.facebook]
@@ -73,6 +76,7 @@ linkedin = "karl-krauth-5116476a"
 twitter = "Krauth"
 telegram = ""
 google_scholar = "qq4zSmQAAAAJ"
+youtube = ""
 
 [params.comments]
 enable = true
@@ -81,11 +85,16 @@ enable = true
 enable = true
 apiEndpoint = "https://api.staticman.net/v2/entry"
 maxDepth = 2
+username = "Karl-Krauth"
+repository = "blog"
 
-[params.comments.staticman.github]
-username = ""
-repository = ""
-branch = ""
+[params.search]
+client = "fuse" # algolia / fuse / lunr
+
+[params.search.algolia]
+appId = ""
+indexName = ""
+searchApiKey = ""
 
 [taxonomies]
 author = "authors"
@@ -95,6 +104,12 @@ tag = "tags"
 
 [permalinks]
 page = "/:slug/"
+
+[[menu.main]]
+name = "Repo"
+weight = -10
+identifier = "repository"
+url = "https://github.com/Karl-Krauth/blog"
 
 [blackfriday]
 hrefTargetBlank = true
